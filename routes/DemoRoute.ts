@@ -7,7 +7,8 @@ export class DemoRoutes{
 
     get routes(){
 
-        this.app.use('/checkConnection', this.demoController.checkConnection);
+        this.app.get('/', this.demoController.renderIndex)
+        this.app.get('/checkConnection', this.demoController.checkConnection);
 
         return this.app;
     }
